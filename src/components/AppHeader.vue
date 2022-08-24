@@ -84,22 +84,23 @@ export default {
     header {
         @include flex('vertical');
         justify-content: space-between;
-        padding: 1rem 0;
+        padding: .7rem 0;
 
         ul {
             li {
                 display: inline-block;
                 margin: 0 15px;
-                line-height: calc(107px - 1rem);
 
                 &.active {
-                    border-bottom: 5px solid $brand_color;
+                    background-color: $brand_color;
+                    padding: 1rem;
+                    border-radius: .5rem;
 
                     a {
-                        color: $brand_color;
+                        color: #fff;
                     }
                 }
-                //a figlio di li
+
                     a {
                         color: #464646;
                         text-decoration: none;

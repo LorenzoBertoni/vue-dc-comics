@@ -33,12 +33,23 @@
 
 
             <div class="footer-right">
-                <!-- <img src="../assets/img/dc-logo-bg.png" alt="DC Logo"> -->
+                <img src="../assets/img/dc-logo-bg.png" alt="DC Logo">
             </div>
         </div>
         
         <div class="cta">
+            <button>SIGN-UP NOW</button>
 
+            <div class="social">
+                <span class="follow-us">FOLLOW US</span>
+                <ul class="cta-list">
+                    <li v-for="(social, index) in socialList" :key="index">
+                        <a :href="social.url">
+                            <img :src="social.logo" :alt="social.name">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         
     </footer>
@@ -156,6 +167,33 @@ export default {
                     url: '#',
                     text: 'DC Power Visa'
                 },
+            ],
+            socialList: [
+                {
+                    name: 'Facebook',
+                    logo: require('../assets/img/footer-facebook.png'),
+                    url: '#'
+                },
+                {
+                    name: 'Twitter',
+                    logo:  require('../assets/img/footer-twitter.png'),
+                    url: '#'
+                },
+                {
+                    name: 'YouTube',
+                    logo:  require('../assets/img/footer-youtube.png'),
+                    url: '#'
+                },
+                {
+                    name: 'Pinterest',
+                    logo:  require('../assets/img/footer-pinterest.png'),
+                    url: '#'
+                },
+                {
+                    name: 'Periscope',
+                    logo:  require('../assets/img/footer-periscope.png'),
+                    url: '#'
+                },
             ]
         }
     }
@@ -164,6 +202,7 @@ export default {
 
 <style scoped lang="scss">
 @import '../styles/variables.scss';
+@import '../styles/mixins.scss';
 
     footer {
         background-image: url('../assets/img/footer-bg.jpg');
@@ -207,9 +246,50 @@ export default {
         }
         }
 
+        
+
         .cta {
-            height: 100px;
             background-color: $footer_color;
+            padding: 2rem 0;
+            @include flex ('vertical');
+            justify-content: space-around;
+            position: relative;
+            z-index: 1;
+
+            button {
+                background-color: $footer_color;
+                padding: .7rem;
+                border: 2px solid $brand_color;
+                color: #fff;
+                cursor: pointer;
+                transition: all linear .5s;
+
+                &:hover {
+                    background-color: $brand_color;
+                    color: #fff;
+                }
+            }
+
+            .social {
+                @include flex('both');
+
+                .follow-us {
+                    color: $brand_color;
+                    font-weight: bold;
+                }
+            }
+
+            .cta-list {
+                list-style: none;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        margin: 0 10px;
+                    }
+                }
+            }
         }
     }
 </style>

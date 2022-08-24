@@ -7,12 +7,12 @@
         </section>
 
         <section id="products">
-            <!-- <ul>
+            <ul>
                 <li v-for="(product, index) in products" :key="index">
-                    <img :src="product.logo" alt="">
-                    <span>{{product.text}}</span>
+                    <img :src="product.logo" :alt="product.text">
+                    <a :href="product.url">{{product.text}}</a>
                 </li>
-            </ul> -->
+            </ul>
         </section>
     </main>
 </template>
@@ -20,34 +20,37 @@
 <script>
 export default {
     name: 'AppContent',
-    /*
     data() {
         return {
             products: [
                 {
-                    logo: 'buy-comics-digital-comics.png',
-                    text: 'Digital Comics'
+                    logo: require('../assets/img/buy-comics-digital-comics.png'),
+                    text: 'Digital Comics',
+                    url: '#'
                 },
                 {
-                    logo: 'buy-comics-merchandise.png',
-                    text: 'DC merchandise'
+                    logo: require('../assets/img/buy-comics-merchandise.png'),
+                    text: 'DC merchandise',
+                    url: '#'
                 },
                 {
-                    logo: 'buy-comics-subscription.png',
-                    text: 'Subscription'
+                    logo: require('../assets/img/buy-comics-subscriptions.png'),
+                    text: 'Subscription',
+                    url: '#'
                 },
                 {
-                    logo: 'comics-digital-comics.png',
-                    text: 'Comic shop locator'
+                    logo: require('../assets/img/buy-comics-shop-locator.png'),
+                    text: 'Comic shop locator',
+                    url: '#'
                 },
                 {
-                    logo: 'comics-digital-comics.png',
-                    text: 'DC power visa'
+                    logo: require('../assets/img/buy-dc-power-visa.svg'),
+                    text: 'DC power visa',
+                    url: '#'
                 },
             ]
         }
     }
-    */
 }
 </script>
 
@@ -73,5 +76,28 @@ export default {
         height: 200px;
         background-color: $brand_color;
         @include flex('both');
+
+        ul {
+            list-style: none;
+            display: flex;
+
+            li {
+                @include flex('both');
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                img {
+                    width: 20%;
+                    margin-right: 10px;
+                }
+            }
+        }
     }
 </style>
