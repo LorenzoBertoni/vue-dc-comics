@@ -92,19 +92,15 @@ export default {
                 margin: 0 15px;
 
                 &.active {
-                    background-color: $brand_color;
+                    border-bottom: 5px solid $brand_color;
                     padding: 1rem;
-                    border-radius: .5rem;
-
-                    a {
-                        color: #fff;
-                    }
                 }
 
                     a {
                         color: #464646;
                         text-decoration: none;
                         font-weight: bold;
+                        transition: color linear .2s;
 
                     &:hover {
                         color: $brand_color;

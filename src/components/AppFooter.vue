@@ -276,6 +276,7 @@ export default {
                 .follow-us {
                     color: $brand_color;
                     font-weight: bold;
+                    margin-right: 10px;
                 }
             }
 
