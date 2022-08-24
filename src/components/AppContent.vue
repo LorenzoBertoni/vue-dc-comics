@@ -1,6 +1,6 @@
 <template>
     <main>
-        <section id="main-content">
+        <section id="main-content" class="container">
             <div>
                 <h1>Content goes here</h1>
             </div>
@@ -29,11 +29,11 @@ export default {
                     text: 'Digital Comics'
                 },
                 {
-                    logo: 'comics-merchandise.png',
+                    logo: 'buy-comics-merchandise.png',
                     text: 'DC merchandise'
                 },
                 {
-                    logo: 'comics-subscription.png',
+                    logo: 'buy-comics-subscription.png',
                     text: 'Subscription'
                 },
                 {
@@ -53,12 +53,16 @@ export default {
 
 <style scoped lang="scss">
 
-@import '../styles/variables';
+@import '../styles/generals.scss';
+@import '../styles/variables.scss';
 @import '../styles/mixins.scss';
 
-    #main-content {
+    main {
         background-color: $content_sect_color;
-        padding: 3rem 20rem;
+    }
+
+    #main-content {
+        padding: 3rem 0;
 
         h1 {
             color: #fff;

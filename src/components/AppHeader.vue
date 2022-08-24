@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="container">
         <a href="#">
             <img src="../assets/img/dc-logo.png" alt="DC Logo">
         </a>
@@ -77,12 +77,13 @@ export default {
 
 <style scoped lang="scss">
 
+@import '../styles/generals.scss';
 @import '../styles/variables.scss';
 @import '../styles/mixins.scss';
 
     header {
         @include flex('vertical');
-        justify-content: space-around;
+        justify-content: space-between;
         padding: 1rem 0;
 
         ul {
