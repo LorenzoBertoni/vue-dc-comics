@@ -84,16 +84,15 @@ export default {
     header {
         @include flex('vertical');
         justify-content: space-between;
-        padding: .7rem 0;
 
         ul {
             li {
                 display: inline-block;
                 margin: 0 15px;
+                line-height: 107px;
 
                 &.active {
                     border-bottom: 5px solid $brand_color;
-                    padding: 1rem;
                 }
 
                     a {

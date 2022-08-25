@@ -185,6 +185,12 @@ export default {
             .img-wrapper {
                 width: 150px;
                 height: 150px;
+                cursor: pointer;
+                transition: transform .5s linear;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
 
                 img {
                     width: 100%;
@@ -219,7 +225,7 @@ export default {
     }
 
     #products {
-        height: 200px;
+        padding: 3rem 0;
         background-color: $brand_color;
         @include flex('both');
 
@@ -229,6 +235,7 @@ export default {
 
             li {
                 @include flex('both');
+                margin-right: 40px;
 
                 a {
                     text-decoration: none;
@@ -240,7 +247,7 @@ export default {
                 }
 
                 img {
-                    width: 20%;
+                    width: 50px;
                     margin-right: 10px;
                 }
             }
