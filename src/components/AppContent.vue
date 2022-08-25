@@ -11,7 +11,7 @@
             :thumb="comic.thumb" :series="comic.series"/>
 
             <div class="load-more-btn">
-                <button>LOAD MORE</button>
+                <a>LOAD MORE</a>
             </div>
         </section>
 
@@ -182,7 +182,7 @@ export default {
             width: 100%;
             @include flex('both');
 
-            button {
+            a {
                 padding: .5rem 3rem;
                 background-color: $brand_color;
                 border: none;

@@ -38,7 +38,7 @@
         </div>
         
         <div class="cta">
-            <button>SIGN-UP NOW</button>
+            <a id="sign-up-btn">SIGN-UP NOW</a>
 
             <div class="social">
                 <span class="follow-us">FOLLOW US</span>
@@ -260,7 +260,7 @@ export default {
         position: relative;
         z-index: 1;
 
-        button {
+        #sign-up-btn {
             background-color: $footer_color;
             padding: .7rem;
             border: 2px solid $brand_color;
