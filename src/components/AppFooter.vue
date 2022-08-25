@@ -244,7 +244,13 @@ export default {
                 }
             }
         }
+
+        .footer-right {
+            img {
+                display: block;
+            }
         }
+    }
 
         
 

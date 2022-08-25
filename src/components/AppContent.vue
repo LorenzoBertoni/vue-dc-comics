@@ -7,13 +7,8 @@
         </section>
 
         <section id="main-content" class="container">
-            <div class="comic" v-for="(comic, index) in comics" :key="index">
-                <div class="img-wrapper">
-                    <img :src="comic.thumb" :alt="comic.series">
-                </div>
-
-                <h4>{{comic.series.toUpperCase()}}</h4>
-            </div>
+            <SingleComic v-for="(comic,index) in comics" :key="index"
+            :thumb="comic.thumb" :series="comic.series"/>
 
             <div class="load-more-btn">
                 <button>LOAD MORE</button>
@@ -32,8 +27,13 @@
 </template>
 
 <script>
+import SingleComic from './SingleComic.vue'
+
 export default {
     name: 'AppContent',
+    components: {
+        SingleComic
+    },
     data() {
         return {
             products: [
@@ -177,38 +177,6 @@ export default {
         display: flex;
         flex-wrap: wrap;
 
-
-        .comic {
-            flex-basis: calc(100% / 6);
-            padding: 1rem 0;
-
-            .img-wrapper {
-                width: 150px;
-                height: 150px;
-                cursor: pointer;
-                transition: transform .5s linear;
-
-                &:hover {
-                    transform: scale(1.1);
-                }
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: top;
-                }
-            }
-
-            h4 {
-                color: #fff;
-                margin-top: 1rem;
-                font-weight: 300;
-                font-size: .8rem;
-                width: 70%;            
-            }
-
-        }
         .load-more-btn {
             width: 100%;
             @include flex('both');
