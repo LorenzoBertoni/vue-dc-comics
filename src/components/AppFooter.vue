@@ -252,51 +252,49 @@ export default {
         }
     }
 
-        
+    .cta {
+        background-color: $footer_color;
+        padding: 2rem 0;
+        @include flex ('vertical');
+        justify-content: space-around;
+        position: relative;
+        z-index: 1;
 
-        .cta {
+        button {
             background-color: $footer_color;
-            padding: 2rem 0;
-            @include flex ('vertical');
-            justify-content: space-around;
-            position: relative;
-            z-index: 1;
+            padding: .7rem;
+            border: 2px solid $brand_color;
+            color: #fff;
+            cursor: pointer;
+            transition: all linear .5s;
 
-            button {
-                background-color: $footer_color;
-                padding: .7rem;
-                border: 2px solid $brand_color;
+            &:hover {
+                background-color: $brand_color;
                 color: #fff;
-                cursor: pointer;
-                transition: all linear .5s;
-
-                &:hover {
-                    background-color: $brand_color;
-                    color: #fff;
-                }
             }
+        }
 
-            .social {
-                @include flex('both');
+        .social {
+            @include flex('both');
 
-                .follow-us {
-                    color: $brand_color;
-                    font-weight: bold;
-                    margin-right: 10px;
-                }
+            .follow-us {
+                color: $brand_color;
+                font-weight: bold;
+                margin-right: 10px;
             }
+        }
 
-            .cta-list {
-                list-style: none;
+        .cta-list {
+            list-style: none;
 
-                li {
-                    display: inline-block;
+            li {
+                display: inline-block;
 
-                    a {
-                        margin: 0 10px;
-                    }
+                a {
+                    margin: 0 10px;
                 }
             }
         }
     }
+}
 </style>

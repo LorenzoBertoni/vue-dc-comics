@@ -20,8 +20,7 @@ export default {
 
 <style lang="scss">
             .comic {
-            flex-basis: calc(100% / 6);
-            padding: 1rem 0;
+            flex-basis: calc((100% / 6) - 10px);
 
             .img-wrapper {
                 width: 150px;

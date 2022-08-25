@@ -176,6 +176,7 @@ export default {
         padding: 3rem 0;
         display: flex;
         flex-wrap: wrap;
+        gap: 10px;
 
         .load-more-btn {
             width: 100%;
